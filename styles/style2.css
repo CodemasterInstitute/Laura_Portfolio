@@ -1,0 +1,314 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFFFFF;
+    font-family: 'Oswald', sans-serif;
+    color: #6682A1;
+}
+
+p {
+    font-family: 'Quattrocento', serif;
+    font-size: 1.2em;
+}
+
+.container {
+    display: grid;
+    /* rows: header, main, footer */
+    grid-template-rows: auto auto auto;
+    width: 80vw;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+}
+
+#toTop {
+    display: none;
+    position: fixed;
+    bottom: 3%;
+    right: 0%;
+    z-index: 99;
+    background-color: #6682A1;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 2em;
+}
+
+#toTop:hover {
+    background-color: #555;
+}
+
+.mar3,
+h3 {
+    margin: 3% 0;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    font-size: 1.5em;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2%;
+}
+
+nav ul {
+    width: 75vw;
+}
+
+nav ul li {
+    width: 18vw;
+    padding: 0
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    opacity: 90%;
+    z-index: 1;
+}
+
+ul {
+    list-style-type: none;
+    text-align: center;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+ul li {
+    text-decoration: none;
+    display: inline-block;
+    padding: 3% 5%
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li:hover {
+    text-decoration: underline;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 3% 0;
+}
+
+.banner {
+    height: 100vh;
+    background-image: url(../images/no-bottle-min.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.skills li {
+    font-size: 2.5em;
+}
+
+.block-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.block-container .block {
+    background-color: darkgreen;
+    height: 50vh;
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.block-container .block #blockWithBackground {
+    height: 1000px;
+    position: absolute;
+    width: 100%
+}
+
+.experience {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.experience__exp {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    flex-basis: 20%;
+    margin: 1%;
+}
+
+.experience__exp h3 {
+    margin: 2% 0;
+}
+
+.experience__exp ol {
+    list-style-type: circle;
+    font-family: 'Quattrocento', serif;
+}
+
+.experience__exp ol .show {
+    display: in-line;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.projects__project {
+    display: flex;
+    flex-basis: 30%;
+    flex-direction: column;
+}
+
+
+/* The Modal (background) */
+
+.projects__project .modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+
+/* Modal Content/Box */
+
+.projects__project .modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    /* 10% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+}
+
+
+/* The Close Button */
+
+.projects__project .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.projects__project .close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.contacts {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Style inputs with type="text", select elements and textareas */
+
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    /* Full width */
+    padding: 12px;
+    /* Some padding */
+    border: 1px solid #ccc;
+    /* Gray border */
+    border-radius: 4px;
+    /* Rounded borders */
+    box-sizing: border-box;
+    /* Make sure that padding and width stays in place */
+    margin-top: 6px;
+    /* Add a top margin */
+    margin-bottom: 16px;
+    /* Bottom margin */
+    resize: vertical/* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+
+/* Style the submit button with a specific background color etc */
+
+input[type=submit] {
+    background-color: #B63961;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    float: right
+}
+
+
+/* When moving the mouse over the submit button, add a darker green color */
+
+input[type=submit]:hover {
+    background-color: #426993;
+}
+
+
+/* Add a background color and some padding around the form */
+
+.container {
+    padding: 20px;
+}
+
+.contacts__contact {
+    display: flex;
+    background-color: white;
+    align-content: center;
+    flex-direction: column;
+    flex-basis: 60%;
+    justify-content: space-between;
+}
+
+footer {
+    display: flex;
+    background-color: #426993;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2%;
+    width: 100%;
+    height: 15vh;
+}
+
+footer ul {
+    width: 30%;
+}
+
+footer ul li {
+    width: 30%;
+    padding: 0
+}

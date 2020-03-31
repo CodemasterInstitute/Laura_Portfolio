@@ -5,148 +5,278 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laura Portfolio</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style2.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quattrocento:400,700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/9b3450371a.js" crossorigin="anonymous"></script>
 </head>
 </head>
 
 <body>
-    <div class="container">
+    <div>
         <header>
             <nav class="sticky">
-                <ul class="nav">
-                    <li><a href="#about">about</a></li>
-                    <li><a href="#experience">experience</a></li>
-                    <li><a href="#projects">projects</a></li>
-                    <li><a href="#contact">contact</a></li>
+                <img src="images/logo-dev-transparent.png" alt="logo" />
+                <ul>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#experience">EXPERIENCE</a></li>
+                    <li><a href="#projects">PROJECTS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
                 </ul>
             </nav>
             <section class="banner">
-                banner</section>
+            </section>
 
         </header>
         <main>
 
-            <button onclick="topFunction()" id="toTop" title="Go to top">back to top</button>
+            <div class="container">
 
-            <h2>laura duggan</h2>
-            <section class="about mar3">
-                <a name="about"></a>
+                <button onclick="topFunction()" id="toTop" title="Go to top">^</button>
 
-                <p>
-                    What I'm moving towards
-                </p>
-                <p>
-                    What I'm moving away from - why?
-                </p>
-                <p>Technologies</p>
-            </section>
+                <a name="about">
+                    <h2>LAURA DUGGAN</h2>
+                </a>
+                <section class="about mar3">
+                    <h3>WHO AM I?</h3>
+                    <p>An experienced IT Professional, ITIL Foundation Level certified. Demonstrable technical, teamwork, and interpersonal skills. Always maintains a commercial focus, with a natural flair for initiative and proactivity. Comfortable relating
+                        to technical/non-technical management and staff. Savvy for understanding business requirements and accurately assessing impact on systems and processes. Quality-focused, while working to corporate expectations and tight timeframes.
+                    </p>
+                    <br />
+                    <p>After 5 years in various technical systems analyst roles, I am moving from working with SaaS products to commercial software development. My interests lie in back-end development and devops.</p>
+                    <br />
+                    <p>
+                        I also really like hiking, hence the photos.
+                    </p>
 
-            <a name="experience"></a>
-            <h2>experience</h2>
-            <section class="experience mar3">
-                <article class="experience__exp">
-                    <img src="/images/soccer-jersey.png" alt="jersey">
-                    <h3>Business Systems Analyst 2019-20</h3>
+                    <h3>TECHNICAL SKILLS</h3>
+                    <ul class="skills">
+                        <li><i class="fab fa-microsoft"></i> C# / .NET Core</li>
+                        <li><i class="fab fa-js"></i> JavaScript</li>
+                        <li><i class="fab fa-node-js"></i> Node.JS</li>
+                        <li><i class="fas fa-database"></i> SQL</li>
+                        <li><i class="fab fa-python"></i> Python</li>
+                        <li><i class="fab fa-php"></i> PHP</li>
+                    </ul>
+                </section>
 
-                </article>
-                <article class="experience__exp">
-                    <img src="/images/soccer-jersey.png" alt="jersey">
-                    <h3>HRIS Technical Analyst 2017-19</h3>
-                </article>
-                <article class="experience__exp">
-                    <img src="/images/soccer-jersey.png" alt="jersey">
-                    <h3>HCM Cloud Analyst 2015-17</h3>
-                </article>
-                <article class="experience__exp">
-                    <img src="/images/soccer-jersey.png" alt="jersey">
-                    <h3>Tech Project Lead Officer 2015</h3>
-                </article>
+            </div>
 
-            </section>
+            <div class="block-container">
+                <div class="block">
+                    <img id="blockWithBackground" src="/images/parallex1.jpg" />
+                </div>
+                <div>
 
-            <a name="projects"></a>
-            <h2>projects</h2>
-            <section class="projects mar3">
-                <article class="projects__project">
-                    <h3>Proj 1</h3>
-                    <img src="http://via.placeholder.com/200x250" alt="project1">
-                    <p>This is some blah blah about this project, click on the image to see more</p>
-                </article>
-                <article class="projects__project">
-                    <h3>Proj 2</h3>
-                    <img src="http://via.placeholder.com/200x250" alt="project2">
-                    <p>This is some blah blah about this project, click on the image to see more</p>
-                </article>
-                <article class="projects__project">
-                    <h3>Proj 3</h3>
-                    <img src="http://via.placeholder.com/200x250" alt="project3">
-                    <p>This is some blah blah about this project, click on the image to see more</p>
-                </article>
-            </section>
-            <a name="contact mar3"></a>
-            <h2>contact</h2>
-            <section class="contacts">
-                <form class="contacts__contact">
-                    <label for="fname">First Name</label>
-                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    <div class="container">
+                        <a name="experience">
+                            <h2>EXPERIENCE</h2>
+                        </a>
 
-                    <label for="lname">Last Name</label>
-                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                        <section class="experience mar3">
+                            <article class="experience__exp">
+                                <h3>BUSINESS SYSTEMS ANALYST 2019-20</h3>
+                                <button id="exp1" onclick="readExp(id)">View Details</button>
 
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Your email address..">
+                                <ol class="show">
+                                    <li>Contracting Technical Business Analyst</li>
+                                    <li>Technical Business Systems Analyst - Fintech</li>
+                                    <li>Business Analyst - Public Sector Transformation Program</li>
+                                </ol>
 
-                    <label for="subject">Subject</label>
-                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                            </article>
+                            <article class="experience__exp">
+                                <h3>HRIS TECHNICAL ANALYST 2017-19</h3>
+                                <p>
+                                    <ol>
+                                        <li>Maintained and extended in-house and Workday system integrations for population of 63,000 employees</li>
+                                        <li>Owned full change/release management process - def to final deployment – observed code, source mgmt, release, peer review and ticketing standards</li>
+                                        <li>Data extraction, reporting, scripting/automation and monitoring</li>
+                                    </ol>
+                                </p>
+                            </article>
+                            <article class="experience__exp">
+                                <h3>HCM CLOUD ANALYST 2015-17</h3>
+                                <p>
+                                    <ol>
+                                        <li>Certified Workday Integrations and HCM Consultant</li>
+                                        <li>Gathered requirements, developed RaaS reports, configured core connectors, payroll integrations, EIB and BIRT templates.</li>
+                                        <li>Other project exp - PMO for international technology roll out programme, SOD for an enterprise application suite, enterprise architecture analysis.</li>
+                                    </ol>
+                                </p>
+                            </article>
+                            <article class="experience__exp">
+                                <h3>TECH PROJECT LEAD OFFICER 2015</h3>
+                                <p>
+                                    <ol>
+                                        <li>Technical lead on project to streamline data and data entry processes.</li>
+                                        <li>Gathered requirements from across the company.</li>
+                                        <li>Implemented solutions using SQL Server, ASP.NET and MS Suite.</li>
+                                    </ol>
+                                </p>
+                            </article>
 
-                    <input type="submit" value="Submit">
-                </form>
-            </section>
+                        </section>
+
+                        <a name="projects">
+                            <h2>PROJECTS</h2>
+                        </a>
+                        <section class="projects mar3">
+                            <article class="projects__project">
+                                <h3>PROJECT 1</h3>
+                                <img src="http://via.placeholder.com/200x250" alt="project1" id="project1">
+                                <p>This is some information about this project, click on the image to see more</p>
+                                <div id="project1modal" class="modal">
+                                    <div class="modal-content">
+                                        <img src="http://via.placeholder.com/700x600" alt="project1">
+                                        <span class="close">&times;</span>
+                                        <p>This is lots more information about the project and a larger picture. Maybe more information also.</p>
+                                    </div>
+
+                                </div>
+                            </article>
+                            <article class="projects__project">
+                                <h3>PROJECT 2</h3>
+                                <img src="http://via.placeholder.com/200x250" alt="project2">
+                                <p>This is some information about this project, click on the image to see more</p>
+                                <div id="project2modal" class="modal">
+                                    <div class="modal-content">
+                                        <img src="http://via.placeholder.com/700x600" alt="project1">
+                                        <span class="close">&times;</span>
+                                        <p>This is lots more information about the project and a larger picture. Maybe more information also.</p>
+                                    </div>
+                            </article>
+                            <article class="projects__project">
+                                <h3>PROJECT 3</h3>
+                                <img src="http://via.placeholder.com/200x250" alt="project3">
+                                <p>This is some information about this project, click on the image to see more</p>
+                                <div id="project3modal" class="modal">
+                                    <div class="modal-content">
+                                        <img src="http://via.placeholder.com/700x600" alt="project1">
+                                        <span class="close">&times;</span>
+                                        <p>This is lots more information about the project and a larger picture. Maybe more information also.</p>
+                                    </div>
+                            </article>
+                        </section>
+                        </div>
+
+                        <div class="block-container">
+                            <div class="block">
+                                <img id="blockWithBackground" src="/images/parallex2.jpg" />
+                            </div>
+                            <div class="container">
+
+                                <a name="contact mar3">
+                                    <h2>CONTACT</h2>
+                                </a>
+                            </div>
+                            <section class="contacts">
+                                <div class="container">
+                                    <form action="action_page.php">
+
+                                        <label for="fname">Name</label>
+                                        <input type="text" id="name" name="name" placeholder="Your name..">
+
+                                        <label for="lname">Email</label>
+                                        <input type="text" id="email" name="email" placeholder="Your email..">
+
+                                        <label for="subject">Subject</label>
+                                        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+                                        <input type="submit" value="Submit">
+
+                                    </form>
+                                </div>
+
+                            </section>
         </main>
         <footer>
-            <p><i class="far fa-copyright"></i> ldugz 2020 <i class="fas fa-tshirt"></i></p>
+            <p><i class="far fa-copyright"></i> Laura Duggan 2020</i>
+            </p>
             <ul class="nav foot">
                 <li><a href="https://linkedin.com/in/laura-duggan" target="blank"><i class="fab fa-linkedin"></i></a></li>
                 <li><a href="https://github.com/labhra" target="blank"><i class="fab fa-github"></i></a></li>
                 <li><a href="https://twitter.com/labhra89" target="blank"><i class="fab fa-twitter"></i></a></li>
             </ul>
-            <div>Icons made by <a href="https://www.flaticon.com/authors/roundicons" title="Roundicons">Roundicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
         </footer>
-    </div>
+        </div>
 
-    <script>
-        //Get the button
-        var mybutton = document.getElementById("toTop");
+        <script>
+            //Get the button
+            var mybutton = document.getElementById("toTop");
 
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function() {
-            scrollFunction()
-        };
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {
+                scrollFunction()
+            };
 
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                mybutton.style.display = "block";
-            } else {
-                mybutton.style.display = "none";
+            function scrollFunction() {
+                //return to top button
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+
+                //background for nav
+                if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
+                    document.querySelector('nav').style.backgroundColor = '#426993';
+                }
             }
-        }
 
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+                document.querySelector('nav').style.backgroundColor = 'transparent';
+            }
 
-        function readMore() {
-            let box1 = document.getElementById("box1");
-            let readbtn = document.getElementById("readbtn");
+            function readExp(id) {
+                console.log(id);
+                let box = document.getElementById(id);
+                console.log(box);
+                //let readbtn = document.getElementById("readbtn");
 
-            box1.classList.toggle("show");
-            (box1.classList.contains("show")) ? readbtn.innerHTML = "Read less": readbtn.innerHTML = "Read more";
+                box.classList.toggle("show");
+                //(box1.classList.contains("show")) ? readbtn.innerHTML = "Read less": readbtn.innerHTML = "Read more";
 
-        }
-    </script>
+            }
+
+            //projects modal
+            // Get the modal
+            var modal = document.getElementById("project1modal");
+
+            // Get the button that opens the modal
+            var btn = document.getElementById("project1");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks on the button, open the modal
+            btn.onclick = function() {
+                modal.style.display = "block";
+                preventDefault();
+
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+
+            var blockWithBackground = document.querySelector('#blockWithBackground');
+            window.addEventListener('scroll', function(e) {
+                var scrolled = window.pageYOffset;
+                blockWithBackground.style.top = -(scrolled * 0.3) + 'px';
+            })
+        </script>
 
 </body>
 
