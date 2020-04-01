@@ -23,6 +23,9 @@
                     <li><a href="#projects">PROJECTS</a></li>
                     <li><a href="#contact">CONTACT</a></li>
                 </ul>
+                <a href="#" onclick="toggleMenu()" id="showMenu">
+                    <i class="fas fa-bars"></i>
+                </a>
             </nav>
             <section class="banner">
             </section>
@@ -62,7 +65,7 @@
 
             <div class="block-container">
                 <div class="block">
-                    <img id="blockWithBackground" src="/images/parallex1.jpg" />
+                    <img class="blockWithBackground" src="/images/parallex1.jpg" />
                 </div>
                 <div>
 
@@ -167,33 +170,34 @@
 
                         <div class="block-container">
                             <div class="block">
-                                <img id="blockWithBackground" src="/images/parallex2.jpg" />
+                                <img class="blockWithBackground" src="/images/parallex2.jpg" />
                             </div>
+                        </div>
+
+                        <div class="container">
+                            <a name="contact">
+                                <h2>CONTACT</h2>
+                            </a>
+                        </div>
+                        <section class="contacts hidden">
                             <div class="container">
+                                <form action="action_page.php">
 
-                                <a name="contact">
-                                    <h2>CONTACT</h2>
-                                </a>
+                                    <label for="fname">Name</label>
+                                    <input type="text" id="name" name="name" placeholder="Your name..">
+
+                                    <label for="lname">Email</label>
+                                    <input type="text" id="email" name="email" placeholder="Your email..">
+
+                                    <label for="subject">Subject</label>
+                                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+                                    <input type="submit" value="Submit">
+
+                                </form>
                             </div>
-                            <section class="contacts hidden">
-                                <div class="container">
-                                    <form action="action_page.php">
 
-                                        <label for="fname">Name</label>
-                                        <input type="text" id="name" name="name" placeholder="Your name..">
-
-                                        <label for="lname">Email</label>
-                                        <input type="text" id="email" name="email" placeholder="Your email..">
-
-                                        <label for="subject">Subject</label>
-                                        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-
-                                        <input type="submit" value="Submit">
-
-                                    </form>
-                                </div>
-
-                            </section>
+                        </section>
         </main>
         <footer>
             <p><i class="far fa-copyright"></i> Laura Duggan 2020</i>
@@ -207,10 +211,7 @@
         </div>
 
         <script>
-            //Get the button
-            var mybutton = document.getElementById("toTop");
-
-            // When the user scrolls down 20px from the top of the document, show the button
+            var topBtn = document.getElementById("toTop");
             window.onscroll = function() {
                 scrollFunction()
             };
@@ -218,13 +219,15 @@
             function scrollFunction() {
                 //return to top button
                 if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                    mybutton.style.display = "block";
+                    topBtn.style.display = "block";
                 } else {
-                    mybutton.style.display = "none";
+                    topBtn.style.display = "none";
                 }
 
+                // .banner is 100vh, get height in pixels.
+                var pxPerVh = document.querySelector('.banner').offsetHeight;
                 //background for nav
-                if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
+                if (document.body.scrollTop > pxPerVh || document.documentElement.scrollTop > pxPerVh) {
                     document.querySelector('nav').style.backgroundColor = '#426993';
                 }
             }
@@ -234,17 +237,6 @@
                 document.body.scrollTop = 0;
                 document.documentElement.scrollTop = 0;
                 document.querySelector('nav').style.backgroundColor = 'transparent';
-            }
-
-            function readExp(id) {
-                console.log(id);
-                let box = document.getElementById(id);
-                console.log(box);
-                //let readbtn = document.getElementById("readbtn");
-
-                box.classList.toggle("show");
-                //(box1.classList.contains("show")) ? readbtn.innerHTML = "Read less": readbtn.innerHTML = "Read more";
-
             }
 
             //projects modal
@@ -276,12 +268,30 @@
                 }
             }
 
-            var blockWithBackground = document.querySelector('#blockWithBackground');
-            window.addEventListener('scroll', function(e) {
-                var scrolled = window.pageYOffset;
-                blockWithBackground.style.top = -(scrolled * 0.3) + 'px';
-            })
+            //parallaxes - working for 1
+            // var blockWithBackground = document.querySelector('#blockWithBackground');
+            // window.addEventListener('scroll', function(e) {
+            //     var scrolled = window.pageYOffset;
+            //     blockWithBackground.style.top = -(scrolled * 0.3) + 'px';
+            // })
 
+
+            //set event listener
+            window.addEventListener('scroll', function(e) {
+
+                //get all elements that are class blockWithBackground
+                let parallaxes = document.querySelectorAll('.blockWithBackground');
+                parallaxes.forEach(function(element) {
+                    let scrolled = window.pageYOffset;
+                    //console.log('scrolled is: ' + scrolled);
+                    //console.log(element.style.top);
+                    element.style.top = -(scrolled * 0.3) + 'px';
+
+                })
+            });
+
+
+            //animations
             function animateHTML() {
                 var elements;
                 var windowHeight;
@@ -311,6 +321,12 @@
 
             }
             animateHTML();
+
+            //hamburger menu for mobile
+            function toggleMenu() {
+                let menu = document.querySelector('nav ul');
+                menu.classList.toggle('show');
+            }
         </script>
 
 </body>
