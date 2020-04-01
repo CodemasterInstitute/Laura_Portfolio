@@ -16,7 +16,7 @@
     <div>
         <header>
             <nav class="sticky">
-                <img src="images/logo-dev-transparent.png" alt="logo" />
+                <img src="images/logo-dev-transparent.png" alt="logo" id="logo" onclick="topFunction()" />
                 <ul>
                     <li><a href="#about">ABOUT</a></li>
                     <li><a href="#experience">EXPERIENCE</a></li>
@@ -34,26 +34,24 @@
 
                 <button onclick="topFunction()" id="toTop" title="Go to top">^</button>
 
+
+                <h1>LAURA DUGGAN</h1>
+
                 <a name="about">
-                    <h2>LAURA DUGGAN</h2>
+                    <h2>ABOUT</h2>
                 </a>
-                <section class="about mar3">
-                    <h3>WHO AM I?</h3>
-                    <p>An experienced IT Professional, ITIL Foundation Level certified. Demonstrable technical, teamwork, and interpersonal skills. Always maintains a commercial focus, with a natural flair for initiative and proactivity. Comfortable relating
-                        to technical/non-technical management and staff. Savvy for understanding business requirements and accurately assessing impact on systems and processes. Quality-focused, while working to corporate expectations and tight timeframes.
-                    </p>
-                    <br />
+                <section class="about mar3 hidden">
                     <p>After 5 years in various technical systems analyst roles, I am moving from working with SaaS products to commercial software development. My interests lie in back-end development and devops.</p>
                     <br />
                     <p>
-                        I also really like hiking, hence the photos.
+                        I also really like hiking, hence the NZ photos.
                     </p>
 
                     <h3>TECHNICAL SKILLS</h3>
-                    <ul class="skills">
+                    <ul class="skills hidden">
                         <li><i class="fab fa-microsoft"></i> C# / .NET Core</li>
                         <li><i class="fab fa-js"></i> JavaScript</li>
-                        <li><i class="fab fa-node-js"></i> Node.JS</li>
+                        <!-- <li><i class="fab fa-node-js"></i> Node.JS</li> -->
                         <li><i class="fas fa-database"></i> SQL</li>
                         <li><i class="fab fa-python"></i> Python</li>
                         <li><i class="fab fa-php"></i> PHP</li>
@@ -73,47 +71,54 @@
                             <h2>EXPERIENCE</h2>
                         </a>
 
-                        <section class="experience mar3">
+                        <section class="experience mar3 hidden">
                             <article class="experience__exp">
+                                <i class="fas fa-comments"></i>
                                 <h3>BUSINESS SYSTEMS ANALYST 2019-20</h3>
-                                <button id="exp1" onclick="readExp(id)">View Details</button>
-
-                                <ol class="show">
-                                    <li>Contracting Technical Business Analyst</li>
-                                    <li>Technical Business Systems Analyst - Fintech</li>
-                                    <li>Business Analyst - Public Sector Transformation Program</li>
-                                </ol>
+                                <div class="experience__exp__text">
+                                    <ol>
+                                        <li>Contracting Technical Business Analyst</li>
+                                        <li>Technical Business Systems Analyst - Agile Fintech</li>
+                                        <li>Business Analyst - Public Sector Transformation Program</li>
+                                        <li>Requirement gathering & analysis, documentation, process mapping, testing</li>
+                                        <li>JIRA, ProMapp, Confluence, Objective, Microsoft Office Suite</li>
+                                    </ol>
+                                </div>
 
                             </article>
                             <article class="experience__exp">
+                                <i class="fas fa-laptop-code"></i>
                                 <h3>HRIS TECHNICAL ANALYST 2017-19</h3>
-                                <p>
+                                <div class="experience__exp__text">
                                     <ol>
                                         <li>Maintained and extended in-house and Workday system integrations for population of 63,000 employees</li>
                                         <li>Owned full change/release management process - def to final deployment – observed code, source mgmt, release, peer review and ticketing standards</li>
                                         <li>Data extraction, reporting, scripting/automation and monitoring</li>
                                     </ol>
-                                </p>
+                                </div>
                             </article>
                             <article class="experience__exp">
+                                <i class="fas fa-wrench"></i>
                                 <h3>HCM CLOUD ANALYST 2015-17</h3>
-                                <p>
+                                <div class="experience__exp__text">
                                     <ol>
                                         <li>Certified Workday Integrations and HCM Consultant</li>
-                                        <li>Gathered requirements, developed RaaS reports, configured core connectors, payroll integrations, EIB and BIRT templates.</li>
-                                        <li>Other project exp - PMO for international technology roll out programme, SOD for an enterprise application suite, enterprise architecture analysis.</li>
+                                        <li>Gathered requirements, developed RaaS reports, configured core connectors, payroll integrations, EIB and BIRT templates</li>
+                                        <li>Other project exp - PMO for international technology roll out programme, SOD for an enterprise application suite, enterprise architecture analysis</li>
                                     </ol>
-                                </p>
+                                </div>
                             </article>
                             <article class="experience__exp">
+                                <i class="fas fa-toolbox"></i>
                                 <h3>TECH PROJECT LEAD OFFICER 2015</h3>
-                                <p>
+                                <div class="experience__exp__text">
                                     <ol>
-                                        <li>Technical lead on project to streamline data and data entry processes.</li>
-                                        <li>Gathered requirements from across the company.</li>
-                                        <li>Implemented solutions using SQL Server, ASP.NET and MS Suite.</li>
+                                        <li>Technical lead on project to streamline data and data entry processes</li>
+                                        <li>Gathered requirements from across the company & established in-scope priorities</li>
+                                        <li>Implemented solutions using SQL Server, ASP.NET and MS Suite</li>
+                                        <li>Knowledge-share of SQL and Advanced-Excel to staff via documentation & tutoring</li>
                                     </ol>
-                                </p>
+                                </div>
                             </article>
 
                         </section>
@@ -121,7 +126,7 @@
                         <a name="projects">
                             <h2>PROJECTS</h2>
                         </a>
-                        <section class="projects mar3">
+                        <section class="projects mar3 hidden">
                             <article class="projects__project">
                                 <h3>PROJECT 1</h3>
                                 <img src="http://via.placeholder.com/200x250" alt="project1" id="project1">
@@ -166,11 +171,11 @@
                             </div>
                             <div class="container">
 
-                                <a name="contact mar3">
+                                <a name="contact">
                                     <h2>CONTACT</h2>
                                 </a>
                             </div>
-                            <section class="contacts">
+                            <section class="contacts hidden">
                                 <div class="container">
                                     <form action="action_page.php">
 
@@ -276,6 +281,36 @@
                 var scrolled = window.pageYOffset;
                 blockWithBackground.style.top = -(scrolled * 0.3) + 'px';
             })
+
+            function animateHTML() {
+                var elements;
+                var windowHeight;
+
+                function init() {
+                    elements = document.querySelectorAll('.hidden');
+                    windowHeight = window.innerHeight;
+                }
+
+                function checkPosition() {
+                    for (var i = 0; i < elements.length; i++) {
+                        var element = elements[i];
+                        var positionFromTop = elements[i].getBoundingClientRect().top;
+
+                        if (positionFromTop - windowHeight <= 0) {
+                            element.classList.add('fade-in-element');
+                            element.classList.remove('hidden');
+                        }
+                    }
+                }
+
+                window.addEventListener('scroll', checkPosition);
+                window.addEventListener('resize', init);
+
+                init();
+                checkPosition();
+
+            }
+            animateHTML();
         </script>
 
 </body>
