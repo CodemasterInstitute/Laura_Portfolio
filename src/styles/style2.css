@@ -95,8 +95,8 @@
     }
     
     .anchor {
-        padding-top: 10vh;
-        margin-top: -10vh;
+        padding-top: 20vh;
+        margin-top: -20vh;
     }
     
     nav ul {
@@ -115,11 +115,13 @@
     }
     
     .sticky {
+        background-color: #426993;
         position: fixed;
         top: 0;
         width: 100vw;
-        opacity: 90%;
+        opacity: 80%;
         z-index: 1;
+        padding: 1%
     }
     
     ul {
@@ -152,7 +154,7 @@
     
     .banner {
         height: 100vh;
-        background-image: url(../images/no-bottle-min.png);
+        background-image: url(../images/no-bottle-min-mobile.jpg);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -202,6 +204,10 @@
         font-size: 2.5em;
     }
     
+    .skills i {
+        color: #212731;
+    }
+    
     .skills li:hover {
         color: #B63961;
     }
@@ -237,6 +243,7 @@
         text-align: left;
         flex-basis: 80%;
         margin: 1%;
+        padding: 3% 0;
     }
     
     .experience__exp h3 {
@@ -248,24 +255,17 @@
         font-family: 'Quattrocento', serif;
     }
     
-    .experience__exp .show {
-        display: inline-block;
-    }
-    
     .experience__exp i {
         text-align: center;
-        font-size: 6em;
-    }
-    
-    .experience__exp i:hover {
-        color: #B63961;
-        font-size: 6.5em
+        font-size: 7em;
+        color: #212731;
+        margin-bottom: 8%;
     }
     
     .projects {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-between;
     }
     
     .projects__project {
@@ -302,7 +302,7 @@
     }
     
     .contacts input[type=submit] {
-        background-color: #B63961;
+        background-color: #212731;
         color: white;
         padding: 12px 20px;
         border: none;
@@ -367,11 +367,14 @@
         #showMenu {
             display: none;
         }
+        .banner {
+            background-image: url(../images/no-bottle-min.jpg);
+        }
         .typewriter-text {
             font-size: 5em;
             animation: typing 5s steps(30, end), blink .75s step-end infinite;
         }
-        a {
+        .anchor {
             padding-top: 10vh;
             margin-top: -10vh;
         }
