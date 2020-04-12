@@ -218,7 +218,6 @@
     }
     
     .block-container .block {
-        background-color: darkgreen;
         height: 50vh;
         flex-grow: 1;
         position: relative;
@@ -266,6 +265,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        justify-content: center;
     }
     
     .projects__project {
@@ -281,53 +281,26 @@
     
     .contacts {
         display: flex;
-        justify-content: center;
-    }
-    
-    .contacts label {
-        font-size: 1.5em;
-    }
-    
-    .contacts input[type=text],
-    select,
-    textarea {
-        width: 100%;
-        padding: 12px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-        margin-top: 6px;
-        margin-bottom: 16px;
-        resize: vertical
-    }
-    
-    .contacts input[type=submit] {
-        background-color: #212731;
-        color: white;
-        padding: 12px 20px;
-        border: none;
-        border-radius: 3px;
-        width: 100%;
-        cursor: pointer;
-        float: right;
-        font-size: 1.5em;
-    }
-    
-    .contacts input[type=submit]:hover {
-        background-color: #426993;
-    }
-    
-    .container {
-        padding: 20px;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        font-size: 6em;
+        padding: 5% 0
     }
     
     .contacts__contact {
         display: flex;
-        background-color: white;
-        align-content: center;
         flex-direction: column;
-        flex-basis: 60%;
-        justify-content: space-between;
+        flex-basis: 80%;
+        text-align: center;
+    }
+    
+    .contacts a {
+        color: #212731;
+        text-decoration: none;
+    }
+    
+    .contacts a:hover {
+        color: #B63961
     }
     
     footer {
@@ -381,11 +354,20 @@
         .experience__exp {
             flex-basis: 45%;
         }
+        .projects__project {
+            flex-basis: 45%;
+        }
+        .contacts__contact {
+            flex-basis: 20%;
+        }
     }
     /* Large devices (laptops/desktops, 1024px and up) */
     
     @media only screen and (min-width: 1024px) {
         .experience__exp {
             flex-basis: 20%;
+        }
+        .projects__project {
+            flex-basis: 30%;
         }
     }
