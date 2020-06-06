@@ -263,7 +263,7 @@
     
     .projects {
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: none;
         justify-content: space-between;
         justify-content: center;
     }
